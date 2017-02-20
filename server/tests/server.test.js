@@ -186,7 +186,7 @@ describe('PATCH /todos/:id', () => {
       .end(done);
   });
 
-  it('should not update a todo when not created by user', (done) => {
+  it('should not update a todo when created by other user', (done) => {
     var hexId = todos[0]._id.toHexString();
     var text = 'This is the new 1st task';
 
